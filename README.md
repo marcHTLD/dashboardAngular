@@ -1,3 +1,49 @@
+# rateAngular
+
+Evaluation Angular
+
+Modular aufgebaut
+Projekt am besten mit Angular CLI erstellen
+ng new name 
+
+Ordner für einzelne Components um Übersicht zu behalten
+
+ 
+Für jedes Component --> 3 Dateien, .html, .css, .ts
+
+Angular Material
+
+https://material.angular.io/guide/getting-started
+
+app.module.ts --> alle Module werden hier importiert
+
+Pipes --> für immer wiederkehrende Programmierpattern
+
+*ngFor="let comment of comments"
+
+Liste darstellen, wird ständig aktualisiert
+
+ng serve --open
+
+# Vorteile
+
+Verwendet von Google AdWords --> höchstwahrscheinlich langer Support
+
+Framework, keine Library (kann auch als Nachteil gesehen werden --> Einschränkung)
+
+Große Community (seit 2010 --> AngularJS)
+
+Two way databinding --> Änderungen in der UI sofort im Modell und umgekehrt
+
+# Nachteile
+
+Spezielle Syntax
+
+Steile Lernkurve (hohe Hürde um einzusteigen)
+
+Community wird kleiner
+
+
 # Dashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
