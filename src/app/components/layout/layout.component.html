@@ -1,0 +1,35 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<!-- 
+<div class="toolbar">
+  <button class="button" (click)="layoutService.addItem(); layoutService.setLayoutPositionStorage()">Add Item</button>
+  <button class="button" (click)="layoutService.getLayoutPositionStorage();">getposition</button>
+  <div
+    class="draggable"
+    draggable="true"
+    (dragend)="layoutService.dropItem('example1')"
+  >
+    Example 1
+  </div>
+  <div
+    class="draggable"
+    draggable="true"
+    (dragend)="layoutService.dropItem('example2')"
+  >
+    Example 2
+  </div>
+</div>
+-->
+<gridster [options]="options" class="gridster">
+  <gridster-item class="draggable" *ngFor="let item of layout" [item]="item" (mouseover)="layoutService.setLayoutPositionStorage()" (dragover)="layoutService.setDropId(item.id)">
+      <ng-container
+        appLayoutItem
+        [componentRef]="layoutService.getComponentRef(item.id)"
+       >
+      </ng-container>
+    <mat-icon (click)="layoutService.deleteItem(item.id); layoutService.setLayoutPositionStorage()">delete</mat-icon>
+    <mat-icon (click)="openDialog(item.name)">edit</mat-icon>
+    <ndc-dynamic class="no-drag" [ndcDynamicComponent]="item.component" (moduleInfo)="display($event)"></ndc-dynamic>
+  </gridster-item>
+</gridster>

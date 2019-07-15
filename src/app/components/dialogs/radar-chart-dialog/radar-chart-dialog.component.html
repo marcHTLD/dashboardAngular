@@ -1,0 +1,25 @@
+<div class="example-form">
+  <form>
+    <mat-form-field class="example-full-width">
+      <mat-label>Background Color</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option value="white">white</mat-option>
+        <mat-option value="blue">blue</mat-option>
+        <mat-option value="yellow">yellow</mat-option>
+        <mat-option value="red">red</mat-option>
+        <mat-option value="green">green</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-label>Opacity</mat-label>
+    <mat-slider [(value)]="slided"
+      class="example-full-width"
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1"
+      min="0"
+      max="10">
+    </mat-slider>
+    <mat-checkbox [(ngModel)]="checked" name="jaujau">Rounded Border</mat-checkbox><br/><br/>
+    <button mat-button (click)="onNoClick()" md-dialog-close>Submit</button>
+  </form>
+</div>

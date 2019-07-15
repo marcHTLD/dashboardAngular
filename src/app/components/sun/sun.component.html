@@ -1,0 +1,4 @@
+<div style="display: block" (mouseover)="setIt()" [ngClass]="{'backGreen' : bool}" [ngStyle]="{'background-color': color, 'opacity': opacity , 'border': border}" *ngIf="lineChartData">
+	<canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
+	 (chartClick)="chartClicked($event)"></canvas>
+</div>

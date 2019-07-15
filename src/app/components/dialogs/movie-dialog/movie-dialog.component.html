@@ -1,0 +1,25 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Choose film" (keyup)="onchange($event.target.value)">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Background Color</mat-label>
+      <mat-select matInput [(ngModel)]="selected" name="something">
+        <mat-option value="white">white</mat-option>
+        <mat-option value="blue">blue</mat-option>
+        <mat-option value="yellow">yellow</mat-option>
+        <mat-option value="red">red</mat-option>
+        <mat-option value="green">green</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-label>Opacity</mat-label>
+    <mat-slider [(value)]="slided"
+      class="example-full-width"
+      thumbLabel
+      [displayWith]="formatLabel"
+      tickInterval="1"
+      min="0"
+      max="10">
+    </mat-slider>
+    <button mat-button (click)="onNoClick()">Submit</button>
+</form>
